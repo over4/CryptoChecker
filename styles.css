@@ -1,0 +1,330 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #dbdbdb;
+}
+.heading {
+    background-color: #27374D; 
+    color:	#DDE6ED; 
+    text-align: left; 
+    padding: 10px 10px 10px 10px; 
+    font-family: "McLaren", cursive;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 1rem; 
+}
+.heading h1{
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    font-size: 400%;
+}
+.heading h1 svg{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #FF9900;
+    transform: scale(3) !important;
+    vertical-align: middle;
+    margin-top: -10px; /* Adjust based on the scale */
+}
+.branding{
+    margin: 0;
+    padding: 0;
+}
+.branding a{
+    color: white;
+
+}
+.search-container {
+    box-shadow: 0 10px 4px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #27374D;
+}
+.search-input {
+    margin-left: 0;
+    border-left: 0;
+    flex-grow: 1;
+    background-color: #898989; 
+    color: #DDE6ED; 
+    padding: 10px;
+    font-family: "McLaren", cursive;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+.search-input:focus {
+    outline: none; 
+    border-color: #fff; 
+    background-color: #7777; 
+}
+.search-input::placeholder {
+    color: #ccc; 
+}
+.search-button, .reset-button {
+    min-width: 15%;
+    max-width: 20%;
+    flex: 0 1 auto;
+    font-family: "McLaren", cursive;
+    width: auto;
+    background-color: #526D82; 
+    color: #DDE6ED; 
+    border: 2px solid #333; 
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.search-button:hover, .reset-button:hover {
+
+    background-color: #9DB2BF; /* Dark grey background for hover */
+    color: black; /* Bitcoin orange text for hover */
+}
+.search-button:last-child, .reset-button:last-child {
+    margin-right: 0;
+}
+
+
+
+
+.searchBarAndSuggestions {
+    flex-grow: 1;
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    position: relative; /* Add this line */
+}
+
+.suggestions {
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 15vh;
+    list-style: none;
+    position: absolute;
+    top: 70%; /* Makes sure it starts right after the input */
+    left: 0;
+    width: 100%; /* Ensures the width matches the input field */
+    background-color: #fff; /* Change as needed */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
+    z-index: 1; /* Ensures it overlays other content */
+    border-radius: 0 0 4px 4px; /* Optional: Rounds the bottom corners */
+}
+
+.suggestions li {
+    font-family: "McLaren", cursive;
+    padding: 10px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.suggestions li:hover {
+    background-color: #d2d2d2; /* Light grey background on hover */
+}
+
+
+
+
+
+
+
+.popUpParent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.popUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "McLaren", cursive;
+    position: fixed;
+    min-width: 50%;
+    min-height: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(192, 192, 192);
+    box-shadow: 0 10px 4px rgba(0,0,0,0.2);
+    border: 2px solid #333; /* Dark grey border */
+    padding: 20px;
+    z-index: 1000;
+}
+
+.popUp p{
+    font-family: "McLaren", cursive;
+    font-size: x-large;
+}
+.popUp button{
+    align-self: flex-end; 
+    margin-top: auto; 
+    max-height: fit-content;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content {
+    display:flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: start;   
+}
+.card {
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
+    font-family: 'Roboto', sans-serif;
+    width: calc(45% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+.card-top {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #526D82;
+}
+.card-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5vw;
+    overflow: hidden;
+}
+.card-text p{
+    color: lime;
+    font-size: 150%;
+    font-weight: bolder;
+    margin: 0;
+}
+.card-text p, .card-text h2,.card-text h3{
+    margin-top: 5px;
+}
+.card-img{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-self: stretch;
+}
+.card-img img {
+    width: 75px; 
+    height: 75px;
+    border-radius: 50%;
+}
+.card-bottom {
+    font-size: larger;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    background-color: #fff;
+}
+.card-bottom p{
+    display: flex;
+    height: fit-content;
+    width: auto;
+    overflow: visible;
+}
+.upArrow, .downArrow{
+    transform: scale(1.5) !important;
+}
+.fullDescCard{
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 10px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+    min-width: 75%;
+    min-height: 60%;
+    max-width: 75%;
+    max-height: 80%;
+}
+.fullDescCardRight{
+    display:flex;
+    height: 100%;
+    width: 20%;
+    align-content: start;
+    justify-content: end;
+}
+.fullDescCardLeft h1,.fullDescCardLeft h2,.fullDescCardLeft h3{
+    color: white;
+    margin: 0;
+}
+.fullDescCardLeft h2{
+    color: lime;
+}
+.fullDescCardTop{
+    background-color: #526D82;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.fullDescCardTop img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.fullDescCardBottom{
+    font-size: medium;
+    background-color: #fff;
+    padding: 10px;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0.6;
+    width: 100%;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+footer .icons{
+    display: flex;
+    flex-direction: row;
+}
+footer .icons a:hover {
+    color: #000000; /* Example hover color: change as needed */
+    transform: translateY(-10px); /* Moves the icon up by 5px on hover */
+}
+footer a:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+footer a{
+    display: inline-flex; /* Ensure this is compatible with transform */
+    justify-content: center; /* Center the content if using flex */
+    align-items: center; /* Center vertically if using flex */
+    opacity: 0.8; /* Starting opacity */
+    padding: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.copyright{
+    text-align: center;
+    color: black;
+    opacity: 0.7;
+}
