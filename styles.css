@@ -11,7 +11,6 @@ html, body {
     color:	#DDE6ED; 
     text-align: left; 
     padding: 10px 10px 10px 10px; 
-    font-family: "McLaren", cursive;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     font-size: 1rem; 
 }
@@ -51,7 +50,6 @@ html, body {
     background-color: #898989; 
     color: #DDE6ED; 
     padding: 10px;
-    font-family: "McLaren", cursive;
     font-size: 20px;
     border-radius: 5px;
     transition: border-color 0.3s ease;
@@ -68,7 +66,6 @@ html, body {
     min-width: 15%;
     max-width: 20%;
     flex: 0 1 auto;
-    font-family: "McLaren", cursive;
     width: auto;
     background-color: #526D82; 
     color: #DDE6ED; 
@@ -115,7 +112,6 @@ html, body {
 }
 
 .suggestions li {
-    font-family: "McLaren", cursive;
     padding: 10px;
     cursor: pointer;
     font-size: medium;
@@ -144,7 +140,6 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "McLaren", cursive;
     position: fixed;
     min-width: 50%;
     min-height: 25%;
@@ -159,7 +154,6 @@ html, body {
 }
 
 .popUp p{
-    font-family: "McLaren", cursive;
     font-size: x-large;
 }
 .popUp button{
@@ -181,7 +175,6 @@ html, body {
 }
 .card {
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
-    font-family: 'Roboto', sans-serif;
     width: calc(45% - 10px);
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -250,7 +243,6 @@ html, body {
     transform: scale(1.5) !important;
 }
 .fullDescCard{
-    font-family: 'Roboto', sans-serif;
     box-shadow: 0 10px 4px rgba(0,0,0,0.2);
     margin: 20px;
     display:flex;
@@ -330,4 +322,13 @@ footer a{
     text-align: center;
     color: black;
     opacity: 0.7;
+}
+@media (max-width: 768px) {
+    .content {
+        display:flex;
+        flex: 1;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;   
+    }
 }
