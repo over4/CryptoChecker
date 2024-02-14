@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/CryptoChecker/static/js/main.c26f30bc.js",
+    "main.js": "/CryptoChecker/static/js/main.7ee568c6.js",
     "index.html": "/CryptoChecker/index.html",
-    "main.c26f30bc.js.map": "/CryptoChecker/static/js/main.c26f30bc.js.map"
+    "main.7ee568c6.js.map": "/CryptoChecker/static/js/main.7ee568c6.js.map"
   },
   "entrypoints": [
-    "static/js/main.c26f30bc.js"
+    "static/js/main.7ee568c6.js"
   ]
 }
